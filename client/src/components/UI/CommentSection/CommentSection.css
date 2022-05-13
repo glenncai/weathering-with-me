@@ -1,14 +1,14 @@
 #comment-section {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
 
-	height: 82vh;
-	padding: 10px 10px 10px 0px;
+    height: 82vh;
+    padding: 10px 10px 10px 0px;
 }
 
 #comment-ol {
@@ -35,9 +35,16 @@
 }
 
 .comments-text {
-	height: fit-content;
-	border-left: 5px solid #29323c;
-	border-radius: 3px;
-	padding: 5px 10px;
-	margin: 0px 22.5px;
+    height: fit-content;
+    border-left: 5px solid #29323c;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 0px 22.5px;
+}
+
+@media only screen and (max-width: 900px) {
+    #comment-section {
+        height: fit-content;
+        padding: 10px;
+    }
 }
