@@ -20,6 +20,7 @@ import { CommentSection } from "../UI/CommentSection/CommentSection";
 import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
 import CircularProgress from "@mui/material/CircularProgress";
+import Tooltip from "@mui/material/Tooltip";
 
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -158,6 +159,7 @@ export const Main = () => {
                       offsetLeft={-3.5 * viewport.zoom}
                       offsetTop={-7 * viewport.zoom}
                     >
+                    <Tooltip title={locationItem.lname} arrow>
                       <Room
                         className="marker-icon"
                         onClick={() =>
@@ -170,6 +172,7 @@ export const Main = () => {
                         }
                         style={{ fontSize: viewport.zoom * 7 }}
                       />
+                    </Tooltip>
                     </Marker>
                     {locationItem._id === currentLocId &&
                       ((lastUpdatedTime && (
