@@ -56,6 +56,8 @@ export const Main = () => {
 
   // Show the corresponding marker, move to marker's location, and show weather details
   const handleMarker = async (id, lat, long, locName) => {
+    // Show loading when click new location
+    setLastUpdatedTime(null);
     // Show popup
     setCurrentLocId(id);
     // Move to the position of the clicked marker
